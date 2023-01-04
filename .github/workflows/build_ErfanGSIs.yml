@@ -44,7 +44,7 @@ jobs:
          run: |
               cd $GITHUB_WORKSPACE/ErfanGSIs
               mkdir ./output
-              sudo apt upgrade && sudo apt install python3-pip
+              sudo apt update && sudo apt install python3-pip
               sudo apt install unace unrar zip unzip p7zip-full p7zip-rar sharutils rar uudeview mpack arj cabextract file-roller device-tree-compiler liblzma-dev brotli liblz4-tool gawk aria2
               pip install backports.lzma protobuf pycrypto
        
