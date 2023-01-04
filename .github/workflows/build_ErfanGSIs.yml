@@ -56,8 +56,7 @@ jobs:
        - name: Zip GSI  
          run: |
               cd $GITHUB_WORKSPACE/ErfanGSIs/output
-              mkdir final
-              zip -r final/GSI.zip ./*
+              tar -czvf test.tar.gz
        
        - name: Upload Asset
          uses: softprops/action-gh-release@v1
