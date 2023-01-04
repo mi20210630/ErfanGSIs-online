@@ -1,4 +1,4 @@
-# actions_build_ErfanGSIs  
+# ErfanGSIs-online 
 
 ## 一个基于 Github Actions 制作的自动跑 ErfanGSIs 的脚本。 
 ### 步骤如下： 
