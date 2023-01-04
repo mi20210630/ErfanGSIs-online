@@ -38,12 +38,12 @@ jobs:
          
        - name: Fix exit
          run: |
-              sed -i 's/\|\| exit 1//g' $GITHUB_WORKSPACE/ErfanGSIs/url2GSI.sh
-              sed -i 's/exit 1//g' $GITHUB_WORKSPACE/ErfanGSIs/url2GSI.sh
+              sed -i 's/\|\| exit 1//g' ErfanGSIs/url2GSI.sh
+              sed -i 's/exit 1//g' ErfanGSIs/url2GSI.sh
        
        - name: Setting up ErfanGSI requirements
          run: |
-              cd $GITHUB_WORKSPACE/ErfanGSIs
+              cd ErfanGSIs
               mkdir ./output
               sudo apt update && sudo apt install python3-pip
               sudo apt install unace unrar zip unzip p7zip-full p7zip-rar sharutils rar uudeview mpack arj cabextract file-roller device-tree-compiler liblzma-dev brotli liblz4-tool gawk aria2
@@ -51,12 +51,12 @@ jobs:
        
        - name: Download Stock Rom & Generate GSI
          run: |
-              cd  $GITHUB_WORKSPACE/ErfanGSIs
+              cd  ErfanGSIs
               sudo bash ./url2GSI.sh -c --$BUILD_TYPE $ROM_URL $ROM_NAME
        
        - name: Zip GSI  
          run: |
-              cd $GITHUB_WORKSPACE/ErfanGSIs
+              cd /ErfanGSIs
               mkdir upload
               sudo apt-get install p7zip 
               7z a -t7z -r ./upload/test.7z ./output/*
@@ -66,8 +66,8 @@ jobs:
          with:
            name: ${{ env.ARTIFACT_NAME }}
            path: |
-                 "${{ github.workspace }}/ErfanGSIs/output/*"
-                 "${{ github.workspace }}/ErfanGSIs/upload/test.7z*"
+                 "ErfanGSIs/output/*"
+                 "ErfanGSIs/upload/test.7z*"
                  
        - name: Upload GSI to WeTransfer
          run: |
