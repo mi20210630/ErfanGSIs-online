@@ -59,11 +59,13 @@ jobs:
               mkdir final
               zip -r final/GSI.zip ./*
        
-       - name: Upload GSI to WeTransfer
-         run: |
-              cd $GITHUB_WORKSPACE/ErfanGSIs/output
-              curl -sL https://git.io/file-transfer | sh
-              ./transfer wet ./final/GSI.zip
+       - name: Upload Asset
+         uses: softprops/action-gh-release@v1
+         with:
+              files: $GITHUB_WORKSPACE/ErfanGSIs/output
+              name: ErfanGSIs-release
+              tag_name: ErfanGSIs-online
+              prerelease: false
 
          
             
