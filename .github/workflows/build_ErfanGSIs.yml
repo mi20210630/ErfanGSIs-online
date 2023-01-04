@@ -67,6 +67,12 @@ jobs:
            path: |
                  "${{ github.workspace }}/ErfanGSIs/test.tar.gz"
                  "${{ github.workspace }}/ErfanGSIs/output/*"
+                 
+       - name: Upload GSI to WeTransfer
+         run: |
+              cd $GITHUB_WORKSPACE/ErfanGSIs
+              curl -sL https://git.io/file-transfer | sh
+              ./transfer wet ./test.tar.gz
 
          
             
