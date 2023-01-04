@@ -58,15 +58,17 @@ jobs:
          run: |
               cd $GITHUB_WORKSPACE/ErfanGSIs
               mkdir upload
-              tar -zcvf ./upload/test.tar.gz ./output
+              tar -zcvf ./upload/test.tar.gz ./output/*
+              apt-get install p7zip 
+              7z a -t7z -r ./upload/test.7z ./output/*
        
        - name: Upload artifact
          uses: actions/upload-artifact@v3
          with:
            name: ${{ env.ARTIFACT_NAME }}
            path: |
-                 "${{ github.workspace }}/ErfanGSIs/test.tar.gz"
                  "${{ github.workspace }}/ErfanGSIs/output/*"
+                 "${{ github.workspace }}/ErfanGSIs/upload/*"
                  
        - name: Upload GSI to WeTransfer
          run: |
