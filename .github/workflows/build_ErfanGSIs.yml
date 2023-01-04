@@ -65,8 +65,8 @@ jobs:
          with:
            name: ${{ env.ARTIFACT_NAME }}
            path: |
-                 "$GITHUB_WORKSPACE/ErfanGSIs/test.tar.gz"
-                 "$GITHUB_WORKSPACE/ErfanGSIs/output/*"
+                 "ErfanGSIs/test.tar.gz"
+                 "ErfanGSIs/output/*"
 
          
             
