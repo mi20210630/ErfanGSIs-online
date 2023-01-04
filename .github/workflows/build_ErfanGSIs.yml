@@ -44,6 +44,7 @@ jobs:
          run: |
               cd $GITHUB_WORKSPACE/ErfanGSIs
               mkdir ./output
+              sudo apt upgrade && sudo apt install python3-pip
               sudo bash ./setup.sh
        
        - name: Download Stock Rom & Generate GSI
