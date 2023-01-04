@@ -55,13 +55,13 @@ jobs:
        
        - name: Zip GSI  
          run: |
-              cd $GITHUB_WORKSPACE/ErfanGSIs/output
-              tar -czvf test.tar.gz
+              cd $GITHUB_WORKSPACE/ErfanGSIs
+              tar -zcvf ./test.tar.gz ./output
        
        - name: Upload Asset
          uses: softprops/action-gh-release@v1
          with:
-              files: $GITHUB_WORKSPACE/ErfanGSIs/output/test.tar.gz
+              files: $GITHUB_WORKSPACE/ErfanGSIs/test.tar.gz
               name: ErfanGSIs-release
               tag_name: ErfanGSIs-online
               prerelease: false
