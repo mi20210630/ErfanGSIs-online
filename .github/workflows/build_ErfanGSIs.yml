@@ -64,7 +64,9 @@ jobs:
          uses: actions/upload-artifact@v3
          with:
            name: ${{ env.ARTIFACT_NAME }}
-           path: "$GITHUB_WORKSPACE/ErfanGSIs/test.tar.gz"&&"$GITHUB_WORKSPACE/ErfanGSIs/output/*"
+           path: |
+                 "$GITHUB_WORKSPACE/ErfanGSIs/test.tar.gz"
+                 "$GITHUB_WORKSPACE/ErfanGSIs/output/*"
 
          
             
