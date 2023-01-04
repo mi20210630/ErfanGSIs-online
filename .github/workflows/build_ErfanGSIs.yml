@@ -18,6 +18,7 @@ env:
   ROM_NAME: MIUI
   BUILD_TYPE: ab
   TZ: Asia/Shanghai
+  ARTIFACT_NAME: ErfanGSIs-test 
 
 jobs:
   build:
@@ -59,13 +60,11 @@ jobs:
               mkdir upload
               tar -zcvf ./upload/test.tar.gz ./output
        
-       - name: Upload Asset
-         uses: softprops/action-gh-release@v1
+       - name: Upload artifact
+         uses: actions/upload-artifact@v3
          with:
-              files: $GITHUB_WORKSPACE/ErfanGSIs/upload/*
-              name: ErfanGSIs-release
-              tag_name: ErfanGSIs-online
-              prerelease: false
+           name: ${{ env.ARTIFACT_NAME }}
+           path: "$GITHUB_WORKSPACE/ErfanGSIs/upload/*"
 
          
             
