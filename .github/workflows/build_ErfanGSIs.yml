@@ -59,7 +59,7 @@ jobs:
               cd $GITHUB_WORKSPACE/ErfanGSIs
               mkdir upload
               tar -zcvf ./upload/test.tar.gz ./output/*
-              apt-get install p7zip 
+              sudo apt-get install p7zip 
               7z a -t7z -r ./upload/test.7z ./output/*
        
        - name: Upload artifact
