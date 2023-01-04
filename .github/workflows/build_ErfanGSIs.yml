@@ -61,7 +61,7 @@ jobs:
        - name: Upload Asset
          uses: softprops/action-gh-release@v1
          with:
-              files: $GITHUB_WORKSPACE/ErfanGSIs/output
+              files: $GITHUB_WORKSPACE/ErfanGSIs/output/test.tar.gz
               name: ErfanGSIs-release
               tag_name: ErfanGSIs-online
               prerelease: false
