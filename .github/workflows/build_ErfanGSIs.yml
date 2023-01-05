@@ -1,15 +1,6 @@
 name: build_ErfanGSIs
 
 on:
-#  release:
-#    types: [published]
-#  push:
-#    branches:
-#      - master
-#    paths:
-#      - '.config'
-#  schedule:
-#    - cron: 0 8 * * 5
   watch:
     types: [started]
     
@@ -22,8 +13,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    if: github.event.repository.owner.id == github.event.sender.id
+    runs-on: macos-latest
 
     steps:
        - name: Checkout
@@ -31,7 +21,7 @@ jobs:
            
        - name: Initialization environment
          run: |
-            sudo -E apt-get -qq install git wget
+            brew install git wget
        
        - name: Clone ErfanGSI Source Code
          run: git clone --recurse-submodules https://github.com/erfanoabdi/ErfanGSIs.git ErfanGSIs
@@ -45,9 +35,7 @@ jobs:
          run: |
               cd ErfanGSIs
               mkdir ./output
-              sudo apt update && sudo apt install python3-pip
-              sudo apt install unace unrar zip unzip p7zip-full p7zip-rar sharutils rar uudeview mpack arj cabextract file-roller device-tree-compiler liblzma-dev brotli liblz4-tool gawk aria2
-              pip install backports.lzma protobuf pycrypto
+              sudo bash setup.sh
        
        - name: Download Stock Rom & Generate GSI
          run: |
