@@ -25,11 +25,6 @@ jobs:
        
        - name: Clone ErfanGSI Source Code
          run: git clone --recurse-submodules https://github.com/erfanoabdi/ErfanGSIs.git ErfanGSIs
-         
-       - name: Fix exit
-         run: |
-              sed -i 's/\|\| exit 1//g' ErfanGSIs/url2GSI.sh
-              sed -i 's/exit 1//g' ErfanGSIs/url2GSI.sh
        
        - name: Setting up ErfanGSI requirements
          run: |
@@ -39,14 +34,14 @@ jobs:
        
        - name: Download Stock Rom & Generate GSI
          run: |
-              cd  ErfanGSIs
+              cd ErfanGSIs
               sudo bash ./url2GSI.sh -c --$BUILD_TYPE $ROM_URL $ROM_NAME
        
        - name: Zip GSI  
          run: |
               cd /ErfanGSIs
               mkdir upload
-              sudo apt-get install p7zip 
+              sudo brew install p7zip 
               7z a -t7z -r ./upload/test.7z ./output/*
        
        - name: Upload artifact
