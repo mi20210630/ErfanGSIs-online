@@ -45,7 +45,7 @@ jobs:
          run: |
               cd ErfanGSIs
               mkdir ./output
-              sudo apt update && sudo apt upgrade
+              sudo apt update && sudo apt install python-pip
               sudo bash setup.sh
               pip install protobuf==3.20.0
        
