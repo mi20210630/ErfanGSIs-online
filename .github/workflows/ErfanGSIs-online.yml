@@ -22,7 +22,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
@@ -47,6 +47,7 @@ jobs:
               mkdir ./output
               sudo apt update && sudo apt upgrade
               sudo bash setup.sh
+              pip install protobuf==3.20.0
        
        - name: Download Stock Rom & Generate GSI
          run: |
