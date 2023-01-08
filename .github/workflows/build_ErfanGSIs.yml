@@ -82,5 +82,5 @@ jobs:
            unzip aliyunpan-v0.2.5-linux-386.zip
            cd aliyunpan-v0.2.5-linux-386
            sudo ./aliyunpan
-           login
+           sudo login
            
