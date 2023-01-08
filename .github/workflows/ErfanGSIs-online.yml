@@ -22,7 +22,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-20.04
     if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
@@ -46,8 +46,7 @@ jobs:
               cd ErfanGSIs
               mkdir ./output
               sudo apt update && sudo apt upgrade
-              sudo apt install unace unrar zip unzip p7zip-full p7zip-rar sharutils rar uudeview mpack arj cabextract file-roller device-tree-compiler liblzma-dev brotli liblz4-tool gawk aria2
-              pip install backports.lzma protobuf pycrypto
+              sudo bash setup.sh
        
        - name: Download Stock Rom & Generate GSI
          run: |
