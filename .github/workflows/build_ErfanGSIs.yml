@@ -1,6 +1,15 @@
 name: build_ErfanGSIs
 
 on:
+#  release:
+#    types: [published]
+#  push:
+#    branches:
+#      - master
+#    paths:
+#      - '.config'
+#  schedule:
+#    - cron: 0 8 * * 5
   watch:
     types: [started]
     
@@ -13,31 +22,43 @@ env:
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
        - name: Checkout
          uses: actions/checkout@master
+           
+       - name: Initialization environment
+         run: |
+            sudo -E apt-get -qq install git wget
        
        - name: Clone ErfanGSI Source Code
          run: git clone --recurse-submodules https://github.com/erfanoabdi/ErfanGSIs.git ErfanGSIs
+         
+       - name: Fix exit
+         run: |
+              sed -i 's/\|\| exit 1//g' ErfanGSIs/url2GSI.sh
+              sed -i 's/exit 1//g' ErfanGSIs/url2GSI.sh
        
        - name: Setting up ErfanGSI requirements
          run: |
               cd ErfanGSIs
               mkdir ./output
-              sudo bash setup.sh
+              sudo apt update && sudo apt install python3-pip
+              sudo apt install unace unrar zip unzip p7zip-full p7zip-rar sharutils rar uudeview mpack arj cabextract file-roller device-tree-compiler liblzma-dev brotli liblz4-tool gawk aria2
+              pip install backports.lzma protobuf pycrypto
        
        - name: Download Stock Rom & Generate GSI
          run: |
-              cd ErfanGSIs
+              cd  ErfanGSIs
               sudo bash ./url2GSI.sh -c --$BUILD_TYPE $ROM_URL $ROM_NAME
        
        - name: Zip GSI  
          run: |
               cd /ErfanGSIs
               mkdir upload
-              sudo brew install p7zip 
+              sudo apt-get install p7zip 
               7z a -t7z -r ./upload/test.7z ./output/*
        
        - name: Upload artifact
@@ -53,6 +74,3 @@ jobs:
               cd $GITHUB_WORKSPACE/ErfanGSIs/upload
               curl -sL https://git.io/file-transfer | sh
               ./transfer wet ./test.tar.gz
-
-         
-            
