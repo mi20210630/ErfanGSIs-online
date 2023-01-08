@@ -1,11 +1,11 @@
 name: build_ErfanGSIs
 
 on:
-#  release:
-#    types: [published]
-#  push:
-#    branches:
-#      - master
+  release:
+    types: [published]
+  push:
+    branches:
+      - master
 #    paths:
 #      - '.config'
 #  schedule:
@@ -56,7 +56,7 @@ jobs:
        
        - name: Zip GSI  
          run: |
-              cd /ErfanGSIs
+              cd ErfanGSIs
               mkdir upload
               sudo apt-get install p7zip 
               7z a -t7z -r ./upload/test.7z ./output/*
@@ -74,3 +74,13 @@ jobs:
               cd $GITHUB_WORKSPACE/ErfanGSIs/upload
               curl -sL https://git.io/file-transfer | sh
               ./transfer wet ./test.tar.gz
+
+       - name: Upload to Aliyun
+         run: |
+           wget https://github.com/tickstep/aliyunpan/releases/download/v0.2.5/aliyunpan-v0.2.5-linux-386.zip
+           sudo apt install unzip
+           unzip aliyunpan-v0.2.5-linux-386.zip
+           cd aliyunpan-v0.2.5-linux-386
+           ./aliyunpan
+           login
+           
