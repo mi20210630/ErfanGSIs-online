@@ -1,11 +1,12 @@
 name: ErfanGSIs-online-18.04
 
 on:
+  workflow_dispatch
 #  release:
 #    types: [published]
 #  push:
 #    branches:
-      - master
+#      - master
 #    paths:
 #      - '.config'
 #  schedule:
