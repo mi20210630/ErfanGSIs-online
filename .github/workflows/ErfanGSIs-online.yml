@@ -46,8 +46,9 @@ jobs:
               cd ErfanGSIs
               mkdir ./output
               sudo apt update && sudo apt install unace unrar zip unzip p7zip-full p7zip-rar sharutils rar uudeview mpack arj cabextract file-roller device-tree-compiler liblzma-dev python-pip brotli liblz4-tool gawk aria2
-              pip3 install backports.lzma protobuf pycrypto
-              pip3 install protobuf==3.20.0
+              sudo apt install python-pip
+              pip install backports.lzma protobuf pycrypto
+              pip install protobuf==3.20.0
        
        - name: Download Stock Rom & Generate GSI
          run: |
