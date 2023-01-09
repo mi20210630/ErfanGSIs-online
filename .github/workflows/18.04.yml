@@ -46,7 +46,7 @@ jobs:
               mkdir ./output
               sudo apt update && sudo apt install unace unrar zip unzip p7zip-full p7zip-rar sharutils rar uudeview mpack arj cabextract file-roller device-tree-compiler liblzma-dev python-pip brotli liblz4-tool gawk aria2
               pip install backports.lzma pycrypto
-              pip install protobuf==3.20.0
+              pip install protobuf==2.6.1
        
        - name: Download Stock Rom & Generate GSI
          run: |
