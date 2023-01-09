@@ -2,10 +2,12 @@ name: system-test
 on:
   workflow_dispatch
 jobs:
-  test:
+  build:
     runs-on: ubuntu-20.04
-      - name:test environment
-        run:|
+      steps:
+      - name: Checkout
+        uses: actions/checkout@master
+        run: |
           sudo apt install python3-pip
           python3 --version
           pip3 --version
