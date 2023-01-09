@@ -35,7 +35,7 @@ jobs:
             sudo -E apt-get -qq install git wget python3
        
        - name: Clone ErfanGSI Source Code
-         run: git clone --recurse-submodules https://github.com/kalina2285/ErfanGSIs-VelanGSIs.git ErfanGSIs
+         run: git clone --recurse-submodules https://github.com/YukkiZx/ErfanGSIs-VelanGSIs.git ErfanGSIs
          
        - name: Fix exit
          run: |
