@@ -4,8 +4,8 @@ on:
 jobs:
   test:
     runs-on: ubuntu-20.04
-      - name: test environment
-        run: |
+      - name:test environment
+        run:|
           sudo apt install python3-pip
           python3 --version
           pip3 --version
