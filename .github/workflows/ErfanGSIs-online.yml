@@ -55,8 +55,10 @@ jobs:
               pip3 install backports.lzma protobuf pycrypto
               pip3 install protobuf==3.20.0
        
-       - name: Download Stock Rom & Generate GSI
-         run: |
+       - uses: actions/setup-python@v4
+         with:
+         python-version: '3.8.10' 
+       - run: |
               cd  ErfanGSIs
               sudo bash ./url2GSI.sh -c --$BUILD_TYPE $ROM_URL $ROM_NAME
        
