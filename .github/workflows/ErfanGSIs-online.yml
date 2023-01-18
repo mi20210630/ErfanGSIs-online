@@ -83,3 +83,9 @@ jobs:
               curl -sL https://git.io/file-transfer | sh
               ./transfer wet ./test.tar.gz
 
+      - name: Post system environment
+        run: |
+          sudo apt install neofetch
+          neofetch
+          python3 --version
+          pip3 --version
