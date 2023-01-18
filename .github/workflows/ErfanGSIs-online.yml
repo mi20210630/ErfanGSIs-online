@@ -22,7 +22,7 @@ env:
   ARTIFACT_NAME: ErfanGSIs-test 
 
 jobs:
-  build:
+  invoke:
     runs-on: ubuntu-22.04
     if: github.event.repository.owner.id == github.event.sender.id
 
