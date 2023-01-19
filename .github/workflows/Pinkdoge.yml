@@ -2,13 +2,12 @@
 name: build_ErfanGSIs
 
 on:
-  watch:
-    types: [started]
+  workflow_dispatch
     
 env:
   ROM_URL: https://cfhcable.dl.sourceforge.net/project/xiaomi-eu-multilang-miui-roms/xiaomi.eu/MIUI-WEEKLY-RELEASES/20.8.6/xiaomi.eu_multi_MIMAX3_20.8.6_v12-10.zip
   ROM_NAME: MIUI
-  BUILD_AB: false
+  BUILD_AB: true
   BUILD_AONLY: true
   ROM_AONLY: MAX3_Aonly_20.8.6-eu.7z
   ROM_AB: K20P_AB_20.7.16-eu.7z
