@@ -1,8 +1,8 @@
 name: build_ErfanGSIs
 
 on:
-  release:
-    types: [published]
+#  release:
+#    types: [published]
 #  push:
 #    branches:
 #      - master
@@ -10,8 +10,7 @@ on:
 #      - '.config'
 #  schedule:
 #    - cron: 0 8 * * 5
-  watch:
-    types: [started]
+  workflow_dispatch
     
 env:
   ROM_URL: https://bigota.d.miui.com/V12.0.1.0.PDICNXM/sakura_images_V12.0.1.0.PDICNXM_20200728.0000.00_9.0_cn_83d6027909.tgz
