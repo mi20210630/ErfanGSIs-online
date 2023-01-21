@@ -1,4 +1,4 @@
-name: build_ErfanGSIs
+name: Darwin
 
 on:
 #  release:
@@ -21,7 +21,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-18.04
+    runs-on: macOS-latest
     if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
@@ -30,7 +30,7 @@ jobs:
            
        - name: Initialization environment
          run: |
-            sudo -E apt-get -qq install git wget
+            brew install git wget
        
        - name: Clone ErfanGSI Source Code
          run: git clone --recurse-submodules https://github.com/erfanoabdi/ErfanGSIs.git ErfanGSIs
