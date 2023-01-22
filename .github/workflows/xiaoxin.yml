@@ -20,7 +20,7 @@ env:
 
 jobs:
   build:
-    runs-on: macOS-latest
+    runs-on: macOS-12
     if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
