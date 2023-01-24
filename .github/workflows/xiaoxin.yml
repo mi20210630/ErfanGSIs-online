@@ -52,6 +52,7 @@ jobs:
        
        - name: Zip GSI  
          run: |
+              mv ErfanGSIs/output/*.txt ./
               cd $GITHUB_WORKSPACE/ErfanGSIs/output
               mkdir upload
               zip -r GSI.zip ./*
@@ -68,5 +69,5 @@ jobs:
          with:
            artifacts: ${{ github.workspace }}/ErfanGSIs/output/upload/*
            tag: ErfanGSIs-${{ env.ROM_NAME }}-${{ env.BUILD_TYPE }}-${{ github.run_number }}
-           bodyFile: "./ErfanGSIs/output/*.txt"
+           bodyFile: "./*.txt"
            token: ${{ secrets.GITHUB_TOKEN }}
