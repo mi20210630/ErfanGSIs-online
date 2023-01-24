@@ -13,7 +13,7 @@ on:
   workflow_dispatch
     
 env:
-  ROM_URL: https://sysupwsdl.vivo.com.cn/upgrade/upload/UpdateFiles/20201215073327bbcb7082271631abb20e994c8a02cb86.zip
+  ROM_URL: https://firmware.meizu.com/Firmware/Flyme/16s_Pro/8.1.8.0/cn/20220925143029/569ef7f6/update.zip
   ROM_NAME: Generic
   BUILD_TYPE: ab
   TZ: Asia/Shanghai
