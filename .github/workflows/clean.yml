@@ -1,0 +1,8 @@
+name: clean-up
+on: workflow_dispatch
+job:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clean up
+        run: rm -r ./*
