@@ -50,6 +50,7 @@ jobs:
              cd $GITHUB_WORKSPACE/ErfanGSIs
              sudo bash ./url2GSI.sh -c --$BUILD_TYPE $ROM_URL $ROM_NAME
   job2:
+    needs: job1
     runs-on: macos-latest 
     steps:      
        - name: Zip GSI  
