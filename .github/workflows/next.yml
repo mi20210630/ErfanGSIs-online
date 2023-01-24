@@ -55,7 +55,8 @@ jobs:
     steps:      
        - name: Zip GSI  
          run: |
-              mv ErfanGSIs/output/*.txt ./
+              touch info.txt
+              echo "mi20210630 developed" >> info.txt
               cd $GITHUB_WORKSPACE/ErfanGSIs/output
               mkdir upload
               zip -r GSI.zip ./*
@@ -65,7 +66,8 @@ jobs:
               else
                   mv GSI.zip upload/
               fi
-              ls "upload"                  
+              ls "upload"
+                   
               
        - name: Upload SGSI to action-release...
          uses: ncipollo/release-action@v1.8.6
