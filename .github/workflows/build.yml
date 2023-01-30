@@ -4,17 +4,17 @@ name: build
 on:
 #  release:
 #    types: [published]
-#  push:
-#    branches:
-#      - master
+  push:
+    branches:
+      - master
 #    paths:
 #      - '.config'
 #  schedule:
 #    - cron: 0 8 * * 5
-  push
+
     
 env:
-  ROM_URL: https://nbdlbuj2q0e3b95qd5q6djd9sscjt34t316crb1vpvs65nqr6qefv32p.qc.dolfincdnx.cn:10443/xdispatch1b9b48c974a31534/bigota.d.miui.com/V13.1.22.8.22.DEV/miui_ZEUS_V13.1.22.8.22.DEV_623e388db6_12.0.zip?bsreqid=670c7b1d6ed8b6ee2df817b26d3aa274
+  ROM_URL: https://tk62n95qg5q07mn8iij570140t9s5a37q0ba70j8v41m6bcukejfv83d.qc.dolfincdnx.cn:10443/xdispatch1b9b48e074a31534/bigota.d.miui.com/V14.0.23.1.9.DEV/miui_ZEUS_V14.0.23.1.9.DEV_f681dc25a4_13.0.zip?bsreqid=d8a094f4c69a1247ef0499da8881d075
   ROM_NAME: Generic
   BUILD_TYPE: ab
   TZ: Asia/Shanghai
