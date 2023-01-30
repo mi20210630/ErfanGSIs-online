@@ -14,7 +14,7 @@ on:
 
     
 env:
-  ROM_URL: https://tk62n95qg5q07mn8iij570140t9s5a37q0ba70j8v41m6bcukejfv83d.qc.dolfincdnx.cn:10443/xdispatch1b9b48e074a31534/bigota.d.miui.com/V14.0.23.1.9.DEV/miui_ZEUS_V14.0.23.1.9.DEV_f681dc25a4_13.0.zip?bsreqid=d8a094f4c69a1247ef0499da8881d075
+  ROM_URL: https://9anf0m1n0tkhv2falsnvrk09ruk17skqnqiiqhf8k08jb6fge2rfv9nq.qc.dolfincdnx.cn:7843/xdispatch1b9b48ee6f06ed7d/bigota.d.miui.com/V13.1.22.9.14.DEV/miui_MUNCH_V13.1.22.9.14.DEV_524fad12fe_12.0.zip?BSLuBan=eyJob3N0IjoiYmlnb3RhLmQubWl1aS5jb20iLCJic3JlcWlkIjoiN2E2ZGMxNDljNGJlZGRlMjBmZDA4OTQ2Nzg2MjI3NjYiLCJjYWNoZV9rZXkiOiJcL1YxMy4xLjIyLjkuMTQuREVWXC9taXVpX01VTkNIX1YxMy4xLjIyLjkuMTQuREVWXzUyNGZhZDEyZmVfMTIuMC56aXAiLCJkbnNfaG9zdCI6InBmMDAzLnYuYnNnc2xiLmNuIiwia2V5IjoiNzI3NWE5MjQ1Y2VkNGJhZGE4NGFhMmM4ZTdkYTE2YzMiLCJ0cyI6MTY3NTA3NTM4N30=
   ROM_NAME: Generic
   BUILD_TYPE: ab
   TZ: Asia/Shanghai
