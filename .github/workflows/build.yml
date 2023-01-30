@@ -1,3 +1,4 @@
+
 name: build
 
 on:
@@ -13,7 +14,7 @@ on:
   workflow_dispatch
     
 env:
-  ROM_URL: https://media-gsjyg-person.gsjyoss.ctyunxs.cn/PERSONCLOUD/1b21fe23-b991-4898-8739-1d50f44de26a.7z?x-amz-CLIENTTYPEIN=UNKNOWN&AWSAccessKeyId=g6jU1T3TkAbPKf5ouH5d&x-amz-userLevel=0&x-amz-limitrate=51200&x-amz-UID=165559186197167&x-amz-APPID=828221&response-content-disposition=attachment%3Bfilename%3D%22%E4%BC%A0%E9%9F%B3Tecno_Pova_3_LF7_HiOS8.6_12_aiduo_%E6%8F%90%E5%8F%96%E5%8E%9F%E5%8C%857z.7z%22%3Bfilename*%3DUTF-8%27%27%25E4%25BC%25A0%25E9%259F%25B3Tecno_Pova_3_LF7_HiOS8.6_12_aiduo_%25E6%258F%2590%25E5%258F%2596%25E5%258E%259F%25E5%258C%25857z.7z&x-amz-CLIENTNETWORK=UNKNOWN&x-amz-CLOUDTYPEIN=PERSON&Signature=Cd6/Etojx2%2BS6%2BWEt0JwYuANIHU%3D&x-amz-SHID=124121636213&Expires=1674631306&x-amz-FSIZE=2930930289&x-amz-UFID=21318116920908185
+  ROM_URL: https://firmware.meizu.com/Firmware/Flyme/16s_Pro/8.1.8.0/cn/20220925143029/569ef7f6/update.zip
   ROM_NAME: Generic
   BUILD_TYPE: ab
   TZ: Asia/Shanghai
@@ -26,6 +27,9 @@ jobs:
     steps:
        - name: Checkout
          uses: actions/checkout@master
+
+       - name: Cleanup
+         uses: rokibhasansagar/slimhub_actions@main
            
        - name: Initialization environment
          run: |
@@ -39,7 +43,7 @@ jobs:
               sed -i 's/\|\| exit 1//g' $GITHUB_WORKSPACE/ErfanGSIs/url2GSI.sh
               sed -i 's/exit 1//g' $GITHUB_WORKSPACE/ErfanGSIs/url2GSI.sh
        
-       - name: Setting up ErfanGSI requirements with XiaoxinSGSI setup script
+       - name: Setting up ErfanGSI requirements
          run: |
               cd $GITHUB_WORKSPACE/ErfanGSIs
               mkdir ./output
@@ -65,7 +69,7 @@ jobs:
               fi
               ls "upload"                  
               
-       - name: Upload SGSI to action-release...
+       - name: Upload GSI to release
          uses: ncipollo/release-action@v1.8.6
          with:
            artifacts: ${{ github.workspace }}/ErfanGSIs/output/upload/*
