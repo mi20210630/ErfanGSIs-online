@@ -11,10 +11,10 @@ on:
 #      - '.config'
 #  schedule:
 #    - cron: 0 8 * * 5
-  workflow_dispatch
+  push
     
 env:
-  ROM_URL: https://firmware.meizu.com/Firmware/Flyme/16s_Pro/8.1.8.0/cn/20220925143029/569ef7f6/update.zip
+  ROM_URL: https://nbdlbuj2q0e3b95qd5q6djd9sscjt34t316crb1vpvs65nqr6qefv32p.qc.dolfincdnx.cn:10443/xdispatch1b9b48c974a31534/bigota.d.miui.com/V13.1.22.8.22.DEV/miui_ZEUS_V13.1.22.8.22.DEV_623e388db6_12.0.zip?bsreqid=670c7b1d6ed8b6ee2df817b26d3aa274
   ROM_NAME: Generic
   BUILD_TYPE: ab
   TZ: Asia/Shanghai
