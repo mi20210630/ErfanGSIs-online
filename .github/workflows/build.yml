@@ -33,7 +33,7 @@ jobs:
            
        - name: Initialization environment
          run: |
-            sudo apt install git wget
+            sudo apt install git wget parted
        
        - name: Clone ErfanGSI Source Code
          run: git clone --recurse-submodules https://github.com/mi20210630/ErfanGSIs.git ErfanGSIs
