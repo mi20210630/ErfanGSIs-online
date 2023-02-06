@@ -14,7 +14,7 @@ on:
 
     
 env:
-  ROM_URL: https://9anf0m1n0tkhv2falsnvrk09ruk17skqnqiiqhf8k08jb6fge2rfv9nq.qc.dolfincdnx.cn:7843/xdispatch1b9b48ee6f06ed7d/bigota.d.miui.com/V13.1.22.9.14.DEV/miui_MUNCH_V13.1.22.9.14.DEV_524fad12fe_12.0.zip?BSLuBan=eyJob3N0IjoiYmlnb3RhLmQubWl1aS5jb20iLCJic3JlcWlkIjoiN2E2ZGMxNDljNGJlZGRlMjBmZDA4OTQ2Nzg2MjI3NjYiLCJjYWNoZV9rZXkiOiJcL1YxMy4xLjIyLjkuMTQuREVWXC9taXVpX01VTkNIX1YxMy4xLjIyLjkuMTQuREVWXzUyNGZhZDEyZmVfMTIuMC56aXAiLCJkbnNfaG9zdCI6InBmMDAzLnYuYnNnc2xiLmNuIiwia2V5IjoiNzI3NWE5MjQ1Y2VkNGJhZGE4NGFhMmM4ZTdkYTE2YzMiLCJ0cyI6MTY3NTA3NTM4N30=
+  ROM_URL: https://sysupwrdl.vivo.com.cn/upgrade/official/officialFiles/PD1818E_A_5.10.33-update-full_1655199179.zip
   ROM_NAME: Generic
   BUILD_TYPE: ab
   TZ: Asia/Shanghai
