@@ -32,7 +32,7 @@ jobs:
            
        - name: Initialization environment
          run: |
-              sudo apt install git wget android-tools-fsutils libc6 lz4
+              sudo apt install git wget libc6 lz4
               wget http://launchpadlibrarian.net/451832846/erofs-utils_1.0-3_amd64.deb
               sudo dpkg -i erofs-utils_1.0-3_amd64.deb
            
