@@ -65,8 +65,8 @@ jobs:
               touch info.txt
               echo "By mi20210630 developed action" >>info.txt
               cd $GITHUB_WORKSPACE/ErfanGSIs/output
-              mkdir upload
               zip -r GSI.zip ./*
+              mkdir upload
               if [[ $(du -sb "GSI.zip" | awk '{print $1}') -gt 2097152000 ]];then
                   echo -e "split packaging..."
                   tar -cpzf - "GSI.zip" | split -d -b 1024m - "upload/GSI.zip"
