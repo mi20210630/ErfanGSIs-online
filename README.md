@@ -1,4 +1,4 @@
-# ErfanGSIs-build
+# ErfanGSIs-online
 
 ## 一个自动跑 ErfanGSIs 的脚本。 
 ### 步骤如下： 
