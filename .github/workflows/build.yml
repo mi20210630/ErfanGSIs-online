@@ -14,7 +14,7 @@ on:
 
     
 env:
-  ROM_URL: http://cdn-ota.blackshark.com/PRS-A0/20220405164052-penrose-ota-signed_by_xiaomi_81423d2b733714d03d6b91da5bfe0593.zip
+  ROM_URL: https://bigota.d.miui.com/V14.0.23.1.30.DEV/miui_DAGU_V14.0.23.1.30.DEV_27a132a14b_13.0.zip
   ROM_NAME: Generic
   BUILD_TYPE: ab
   TZ: Asia/Shanghai
