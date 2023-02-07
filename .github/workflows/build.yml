@@ -33,8 +33,14 @@ jobs:
            
        - name: Initialization environment
          run: |
-            sudo apt install git wget parted erofs-utils
-       
+            sudo apt install git wget parted lz4
+            git clone https://git.kernel.org/pub/scm/linux/kernel/git/xiang/erofs-utils.git
+            cd erofs-utils
+            ./autogen.sh
+            ./configure
+            make
+            sudo make install
+
        - name: Clone ErfanGSI Source Code
          run: git clone --recurse-submodules https://github.com/mi20210630/ErfanGSIs.git ErfanGSIs
          
