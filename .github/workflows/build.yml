@@ -14,7 +14,7 @@ on:
 
     
 env:
-  ROM_URL: https://github.com/TheStrechh/thestrechh_builds/releases/download/20230125-0549/Arrow-v13.0-surya-UNOFFICIAL-20230124-GAPPS.zip
+  ROM_URL: https://bigota.d.miui.com/V14.0.23.1.31.DEV/miui_NUWA_V14.0.23.1.31.DEV_5506be42d3_13.0.zip
   ROM_NAME: Generic
   BUILD_TYPE: ab
   TZ: Asia/Shanghai
