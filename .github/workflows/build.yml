@@ -13,7 +13,7 @@ on:
 
     
 env:
-  ROM_URL: https://bigota.d.miui.com/V14.0.23.1.30.DEV/miui_DAGU_V14.0.23.1.30.DEV_27a132a14b_13.0.zip
+  ROM_URL: https://bigota.d.miui.com/V14.0.23.1.31.DEV/miui_NUWA_V14.0.23.1.31.DEV_5506be42d3_13.0.zip
   ROM_NAME: Generic
   BUILD_TYPE: ab
   TZ: Asia/Shanghai
@@ -32,8 +32,10 @@ jobs:
            
        - name: Initialization environment
          run: |
-            sudo apt install git wget android-tools-fsutils
-
+              sudo apt install git wget android-tools-fsutils libc6 lz4
+              wget http://launchpadlibrarian.net/451832846/erofs-utils_1.0-3_amd64.deb
+              sudo dpkg -i erofs-utils_1.0-3_amd64.deb
+           
        - name: Clone ErfanGSI Source Code
          run: git clone --recurse-submodules https://github.com/mi20210630/ErfanGSIs.git ErfanGSIs
          
