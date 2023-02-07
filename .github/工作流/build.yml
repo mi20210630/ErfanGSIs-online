@@ -80,5 +80,5 @@ jobs:
          with:
            artifacts: ${{ github.workspace }}/ErfanGSIs/output/upload/*
            tag: ErfanGSIs-${{ env.ROM_NAME }}-${{ env.BUILD_TYPE }}-${{ github.run_number }}
-           bodyFile: "info.txt"
+           bodyFile: "${{ github.workspace }}/ErfanGSIs/output/info.txt"
            token: ${{ secrets.PAT }}
