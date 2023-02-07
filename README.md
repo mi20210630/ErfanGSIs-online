@@ -3,7 +3,7 @@
 ## 一个自动跑 ErfanGSIs 的脚本。 
 ### 步骤如下： 
 - 首先，fork 这个仓库。 
-- 然后去.github/workflows/main.yml里在env中修改内容
+- 然后去.github/workflows/build.yml里在env中修改内容
 - 最后，在 Release 里下载
 
 ## 其他注意事项 ##
