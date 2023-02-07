@@ -14,7 +14,7 @@ on:
 
     
 env:
-  ROM_URL: https://gauss-componentotacostmanual-cn.allawnfs.com/remove-3905d7f694ac88db7ad3a49c0f3e88b1/component-ota/22/08/31/e19686e8408c43679c6c010aa8589a90.zip
+  ROM_URL: https://github.com/TheStrechh/thestrechh_builds/releases/download/20230125-0549/Arrow-v13.0-surya-UNOFFICIAL-20230124-VANILLA.zip
   ROM_NAME: Generic
   BUILD_TYPE: ab
   TZ: Asia/Shanghai
