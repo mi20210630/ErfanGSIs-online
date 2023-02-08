@@ -49,8 +49,6 @@ jobs:
               cd $GITHUB_WORKSPACE/ErfanGSIs
               mkdir ./output
               sudo bash ./setup.sh
-              sudo sed -i 's/USE_MIRROR_FOR_PIP\=true/USE_MIRROR_FOR_PIP\=false/' $GITHUB_WORKSPACE/ErfanGSIs/setup.sh
-              sudo bash $GITHUB_WORKSPACE/ErfanGSIs/setup.sh
               java -version
               pip3 install aligo
               
