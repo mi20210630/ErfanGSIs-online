@@ -13,7 +13,7 @@ on:
 
     
 env:
-  ROM_URL: https://dl.google.com/developers/android/udc/images/factory/cheetah_beta-upp1.230113.009-factory-1a3edc0d.zip
+  ROM_URL: https://dl.google.com/developers/android/udc/images/factory/raven_beta_64-upp1.230113.009-factory-bef33e5d.zip
   ROM_NAME: Generic
   BUILD_TYPE: ab
   TZ: Asia/Shanghai
