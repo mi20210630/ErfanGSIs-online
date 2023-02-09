@@ -13,7 +13,7 @@ on:
 
     
 env:
-  ROM_URL: https://bigota.d.miui.com/V14.0.23.1.31.DEV/miui_NUWA_V14.0.23.1.31.DEV_5506be42d3_13.0.zip
+  ROM_URL: https://dl.google.com/developers/android/udc/images/factory/cheetah_beta-upp1.230113.009-factory-1a3edc0d.zip
   ROM_NAME: Generic
   BUILD_TYPE: ab
   TZ: Asia/Shanghai
