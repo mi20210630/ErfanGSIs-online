@@ -13,7 +13,7 @@ on:
 
     
 env:
-  ROM_URL: https://dl.google.com/developers/android/udc/images/factory/raven_beta_64-upp1.230113.009-factory-bef33e5d.zip
+  ROM_URL: https://dl.google.com/developers/android/udc/images/factory/cheetah_beta-upp1.230113.009-factory-1a3edc0d.zip
   ROM_NAME: Generic
   BUILD_TYPE: ab
   TZ: Asia/Shanghai
@@ -26,15 +26,11 @@ jobs:
     steps:
        - name: Checkout
          uses: actions/checkout@master
-
-       - name: Cleanup
-         uses: rokibhasansagar/slimhub_actions@main
            
        - name: Initialization environment
          run: |
-              sudo apt install git wget libc6 lz4
-              wget http://launchpadlibrarian.net/451832846/erofs-utils_1.0-3_amd64.deb
-              sudo dpkg -i erofs-utils_1.0-3_amd64.deb
+              sudo apt install git
+              echo "BUILD_TIME=$(date +%s | md5sum | awk '{print substr($1,1,10)}')" >> $GITHUB_ENV
            
        - name: Clone ErfanGSI Source Code
          run: git clone --recurse-submodules https://github.com/mi20210630/ErfanGSIs.git ErfanGSIs
@@ -74,6 +70,6 @@ jobs:
          uses: ncipollo/release-action@v1.8.6
          with:
            artifacts: ${{ github.workspace }}/ErfanGSIs/output/upload/*
-           tag: ErfanGSIs-${{ env.ROM_NAME }}-${{ env.BUILD_TYPE }}-${{ github.run_number }}
+           tag: ErfanGSIs-${{ env.ROM_NAME }}-${{ env.BUILD_TYPE }}-${{ env.BUILD_TIME }}
            bodyFile: "${{ github.workspace }}/ErfanGSIs/output/info.txt"
            token: ${{ secrets.PAT }}
