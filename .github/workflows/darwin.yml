@@ -34,9 +34,10 @@ jobs:
             #tar -xf fuse-ext2-0.0.7.tar.gz
             #ls fuse-ext2-0.0.7
             wget https://github.com/osxfuse/osxfuse/releases/download/macfuse-4.4.1/macfuse-4.4.1.dmg
-            sudo hdiutil attach macfuse-4.4.1.dmg
-            sudo installer -pkg /Volumes/macfuse\ 4.4.1/macfuse.pkg -target /
-            sudo hdiutil detach /Volumes/macfuse\ 4.4.1
+            mv macfuse-4.4.1.dmg macfuse.dmg
+            sudo hdiutil attach macfuse.dmg
+            sudo installer -pkg /Volumes/macfuse/macfuse.pkg -target /
+            sudo hdiutil detach /Volumes/macfuse
 
        - name: Clone ErfanGSI Source Code
          run: git clone --recurse-submodules https://github.com/erfanoabdi/ErfanGSIs.git ErfanGSIs
