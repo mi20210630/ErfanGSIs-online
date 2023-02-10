@@ -29,6 +29,7 @@ jobs:
            
        - name: Initialization environment
          run: | 
+            PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
             brew install coreutils grep gawk s3fs erofs-utils ext2fuse
             #wget https://downloads.sourceforge.net/project/fuse-ext2/fuse-ext2/fuse-ext2-0.0.7/fuse-ext2-0.0.7.tar.gz?ts=gAAAAABj5Z_hRqj-ANDQKM3fBfA3br1ghy9UDNCfPG5H2AgpOAPj2TzA359OmCEfHlnwU7oRYTgw6u6WEHK23vFkVPB2-IVvKw%3D%3D&use_mirror=master&r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Ffuse-ext2%2Ffiles%2F -O fuse-ext2-0.0.7.tar.gz
             brew create https://downloads.sourceforge.net/project/fuse-ext2/fuse-ext2/fuse-ext2-0.0.7/fuse-ext2-0.0.7.tar.gz?ts=gAAAAABj5Z_hRqj-ANDQKM3fBfA3br1ghy9UDNCfPG5H2AgpOAPj2TzA359OmCEfHlnwU7oRYTgw6u6WEHK23vFkVPB2-IVvKw%3D%3D&use_mirror=master&r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Ffuse-ext2%2Ffiles%2F
