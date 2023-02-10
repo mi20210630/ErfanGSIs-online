@@ -37,8 +37,8 @@ jobs:
             mv macfuse-4.4.1.dmg macfuse.dmg
             sudo hdiutil attach macfuse.dmg
             ls /Volumes/macFUSE
-            sudo installer -pkg /Volumes/macfuse/macfuse.pkg -target /
-            sudo hdiutil detach /Volumes/macfuse
+            sudo installer -pkg /Volumes/macFUSE/Install macFUSE.pkg -target /
+            sudo hdiutil detach /Volumes/macFUSE
 
        - name: Clone ErfanGSI Source Code
          run: git clone --recurse-submodules https://github.com/erfanoabdi/ErfanGSIs.git ErfanGSIs
