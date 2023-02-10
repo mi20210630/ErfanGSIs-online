@@ -36,6 +36,7 @@ jobs:
             wget https://github.com/osxfuse/osxfuse/releases/download/macfuse-4.4.1/macfuse-4.4.1.dmg
             mv macfuse-4.4.1.dmg macfuse.dmg
             sudo hdiutil attach macfuse.dmg
+            ls /Volumes/macFUSE
             sudo installer -pkg /Volumes/macfuse/macfuse.pkg -target /
             sudo hdiutil detach /Volumes/macfuse
 
