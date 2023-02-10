@@ -31,8 +31,7 @@ jobs:
          run: |
             brew install coreutils grep gawk
             #wget https://downloads.sourceforge.net/project/fuse-ext2/fuse-ext2/fuse-ext2-0.0.7/fuse-ext2-0.0.7.tar.gz?ts=gAAAAABj5Z_hRqj-ANDQKM3fBfA3br1ghy9UDNCfPG5H2AgpOAPj2TzA359OmCEfHlnwU7oRYTgw6u6WEHK23vFkVPB2-IVvKw%3D%3D&use_mirror=master&r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Ffuse-ext2%2Ffiles%2F -O fuse-ext2-0.0.7.tar.gz
-            #tar -xf fuse-ext2-0.0.7.tar.gz
-            #ls fuse-ext2-0.0.7
+            brew create https://downloads.sourceforge.net/project/fuse-ext2/fuse-ext2/fuse-ext2-0.0.7/fuse-ext2-0.0.7.tar.gz?ts=gAAAAABj5Z_hRqj-ANDQKM3fBfA3br1ghy9UDNCfPG5H2AgpOAPj2TzA359OmCEfHlnwU7oRYTgw6u6WEHK23vFkVPB2-IVvKw%3D%3D&use_mirror=master&r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Ffuse-ext2%2Ffiles%2F
             wget https://github.com/osxfuse/osxfuse/releases/download/macfuse-4.4.1/macfuse-4.4.1.dmg
             mv macfuse-4.4.1.dmg macfuse.dmg
             sudo hdiutil attach macfuse.dmg
