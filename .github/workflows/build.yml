@@ -13,7 +13,7 @@ on:
 
     
 env:
-  ROM_URL: https://dl.google.com/developers/android/udc/images/ota/bramble_beta-ota-upp1.230113.009-7bac8b6c.zip
+  ROM_URL: https://bigota.d.miui.com/V12.5.3.0.QCPCNXM/olivelite_images_V12.5.3.0.QCPCNXM_20211105.0000.00_10.0_cn_11862639cb.tgz
   ROM_NAME: Generic
   BUILD_TYPE: ab
   TZ: Asia/Shanghai
