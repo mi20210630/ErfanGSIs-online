@@ -13,7 +13,7 @@ on:
 
     
 env:
-  ROM_URL: https://sysupwrdl.vivo.com.cn/upgrade/official/officialFiles/PD2164_A_5.7.36-update-full_1671446734.zip
+  ROM_URL: https://do6prasq.v1d.szbdyd.com:9305/download.meizu.com/Firmware/Flyme/m2391/10.0.2.0/demo/20230329190409/969555af/update.zip?xyip=112.65.29.39&xyct=158&xy_nosvr=true&xy_usource=download-xys.meizu.com&xy_rid=*1Oz19wi*Tq2R4&xy_oid=43158&xy_nc=2NvfI1==
   ROM_NAME: Generic
   BUILD_TYPE: ab
   TZ: Asia/Shanghai
